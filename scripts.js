@@ -7,9 +7,9 @@ function getLocation() {
 }
 
 function success(position) {
-    const key;
-    if(weather_key){
-        key = weather_key
+    let key;
+    if(weather_key.length > 1){
+        key = weather_key;
     }
     else {
         key = process.env.WEATHER_KEY;
