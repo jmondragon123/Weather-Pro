@@ -7,13 +7,20 @@ function getLocation() {
 }
 
 function success(position) {
-    const key = weather_key;
+    const key;
+    if(weather_key){
+        key = weather_key
+    }
+    else {
+        key = process.env.WEATHER_KEY;
+    }
+    
     getCity(key,position.coords.latitude, position.coords.longitude);
     getWeather(key,position.coords.latitude, position.coords.longitude);
 }
 
 function getCity(key,lat,long) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&units=imperial`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${key}&units=imperial`;
     fetch(url)
         .then(respone => respone.json())
         .then(data => {
@@ -60,7 +67,7 @@ function addForecast(dict){
 
     var img = document.createElement('img');
     const img_icon_fore = dict.weather[0].icon;
-    img.src = `http://openweathermap.org/img/wn/${img_icon_fore}.png`
+    img.src = `https://openweathermap.org/img/wn/${img_icon_fore}.png`
 
     var p_min_max = document.createElement("P");
     var text_min_max = document.createTextNode((dict.temp.max).toFixed(0) + "/" + (dict.temp.min).toFixed(0) + "\u00B0F");
@@ -98,7 +105,7 @@ function getWeather(key,lat,long) {
             feels_likes.innerHTML = "Feels like: " + (data.current.feels_like).toFixed(0) + "\u00B0";
             humidities.innerHTML = "Humidity: " + data.current.humidity + "%";
             const weather_icon = data.current.weather[0].icon;
-            img_icon.src = `http://openweathermap.org/img/wn/${weather_icon}@4x.png`;
+            img_icon.src = `https://openweathermap.org/img/wn/${weather_icon}@4x.png`;
             
             const forecast_array = data.daily;
             forecast_array.forEach(forecast_element => {
