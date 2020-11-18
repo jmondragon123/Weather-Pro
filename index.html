@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <div class='weather_pro'>
+        <div class='weather_pro_container'>
+            <div class='weather_title'>
+                <h1>Weather Pro</h1>
+            </div>
+            <div class="weather_container">
+                <div class='weather_info'>
+                    <p id='date'>9:00am, Nov 18</p>
+                    <p id='location'>California</p>
+                    <p id ='temperature'>54</p>
+
+                    <div class="date_cond">
+                        <p id='feels_like'>Feels like: 47</p>
+                        <p id='conditions'>Few Clouds</p>
+                    </div>
+                </div>
+                <div class='weather_icon'>
+                    <img id='icon' src="http://openweathermap.org/img/wn/01d@4x.png" alt="Italian Trulli">
+                </div>
+            </div>
+            <div class='weather_extra_info'>
+                <p id ='temp_max'>High 80</p>
+                <p id ='temp_min'>Low 45</p>
+                <p id='humidity'>Humidity: 44%</p>
+            </div>
+            
+            <div class='weather_forecast'>
+            </div>
+            
+
+        </div>
+    </div>
+    <script src="./api.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>

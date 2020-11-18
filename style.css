@@ -1,0 +1,164 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My CSS Styling */
+
+body {
+    overflow: hidden;
+    /* background-color: rgb(126, 126, 126); */
+    background-image: url("sky.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #dfdfdf;
+    /* background-color: #ffffff; */
+
+}
+
+.weather_pro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+.weather_pro_container {
+    width: 600px;
+}
+.weather_title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.weather_container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px
+}
+
+.weather_info {
+    width: 100%;
+    font-size: 2rem;
+}
+
+.weather_info p {
+    padding: 10px;
+}
+
+.date_cond { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.weather_info #location {
+    font-size: 3.5rem;
+}
+
+.weather_info #temperature {
+    font-size: 3rem;
+}
+
+.weather_icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.weather_icon img {
+    width: auto;
+}
+
+.weather_extra_info {
+    display: flex;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: rgba(167, 170, 144, 0.616);
+    padding: 10px
+
+}
+.weather_extra_info p::after {
+    content: "";
+    padding-right: 50px;
+}
+
+.weather_forecast {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(167, 170, 144, 0.616);
+    padding: 10px
+}
+
+.forecast{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.forecast * {
+    margin: 0px 10px 0px 0px;
+}
+
+.forecast_info {
+    display: flex;
+    align-items: center;
+    flex-basis: 60%;
+}
+
+
